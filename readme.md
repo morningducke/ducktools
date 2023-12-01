@@ -1,0 +1,1 @@
+Various implementations of AI and AI-ish tools mostly for uni stuff
