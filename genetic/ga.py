@@ -166,9 +166,6 @@ class GA:
         elif self.select == "tourn":
             selected = [self._selection_tournament() for _ in range(len(self.pop))]
 
-        # fitness_sum = sum(scores_scaled)
-        # selection_probs = [p/fitness_sum for p in scores_scaled]
-        # selected = [self.selection_roulette(selection_probs) for _ in range(len(self.pop_))] 
         children = []
         for i in range(0, len(self.pop), 2):
             for c in self._crossover(self.pop[selected[i]], self.pop[selected[i + 1]]):
@@ -200,7 +197,6 @@ class GA:
             chromosome, eval = self._step()
             if fit - eval > self.eps:
                 self.best_chromosome = chromosome
-                # print(f"{i} new best: {self.decode(self.best_chromosome_)} = {eval}")
                 stop_counter = 0
             else:
                 stop_counter += 1
