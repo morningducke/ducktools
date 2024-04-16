@@ -2,7 +2,7 @@ import numpy as np
 import graphviz
 from abc import ABCMeta, abstractmethod
 
-class ImpurityFunctions():
+class ImpurityFunctions:
     """Class that contains impurity functions implementations"""
     def gini_index(y):
         """Calculate gini index for y
